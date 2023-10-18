@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# Fotofolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fotofolio is a web application that allows users to explore and discover a curated collection of stunning photographs from Unsplash. Users can search for specific photos, view details about each image, and enjoy a seamless browsing experience.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- **Frontend**: React, Ant Design
+- **State Management**: React Hooks
+- **Styling**: Tailwind CSS
+- **API**: Unsplash API
+- **HTTP Client**: Axios
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Desktop View
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![image](https://github.com/JaiBhalla03/Fotofolio/assets/101990594/65c2643a-a49d-46cb-9f62-9ffe6ecd8a0e)
+![image](https://github.com/JaiBhalla03/Fotofolio/assets/101990594/fd5a4d8b-4341-4a22-bbca-aba34458e77b)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Mobile View
 
-### `npm run build`
+![image](https://github.com/JaiBhalla03/Fotofolio/assets/101990594/34e544a0-7eba-48c1-a6da-3209bb2ea1b6)
+![image](https://github.com/JaiBhalla03/Fotofolio/assets/101990594/49cb2a2f-bbd7-42c2-a442-224c0f00e350)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Run Locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/JaiBhalla03/Fotofolio.git
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Install dependencies
+   ```bash
+   cd Fotofolio
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Run the development
+   ```bash
+   npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Open your browser and visit http://localhost:3000
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Hosted Server
+The project is hosted on https://fotofolio.vercel.app/
 
-## Learn More
+Visit Fotofolio to explore the photo gallery!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Author
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Name:** Jai Bhalla
+- **Contact:** jaibhalla@gmail.com
+
+## License
+
+This project is licensed under the MIT License.
+
