@@ -43,10 +43,10 @@ const Gallery = () => {
 
     useEffect(() => {
         if (searchTerm !== '') {
-            baseUrlRef.current = `https://api.unsplash.com/search/photos/?client_id=${REACT_APP_API_ACCESS_KEY}&query=${searchTerm}&per_page=30`;
+            baseUrlRef.current = `https://api.unsplash.com/search/photos/?client_id=C7YAPYI6VGT485gdDdvSmQjXC-FYuFWKK3yB4DOZTnc&query=${searchTerm}&per_page=30`;
             fetchData2();
         } else {
-            baseUrlRef.current = `https://api.unsplash.com/photos/?client_id=${REACT_APP_API_ACCESS_KEY}&per_page=30`;
+            baseUrlRef.current = `https://api.unsplash.com/photos/?client_id=C7YAPYI6VGT485gdDdvSmQjXC-FYuFWKK3yB4DOZTnc&per_page=30`;
             fetchData1();
         }
     }, [searchTerm, REACT_APP_API_ACCESS_KEY]);
