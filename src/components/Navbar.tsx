@@ -60,7 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({ searching = onSearch, onThemeChange }) 
                     placeholder="input search text"
                     enterButton="Search"
                     size="large"
-                    className={'rounded-md bg-[#2d2d2d]'}
+                    className={`rounded-md bg-[#2d2d2d] ${isDarkMode ? 'bg-[#2d2d2d]' : 'bg-gray-400'}`}
                     onChange={handleSearch}
                     onSearch={searching}
                 />
