@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import axios from 'axios';
-import {Card, Modal, Skeleton} from 'antd';
+import {Card, Modal} from 'antd';
 import SkeletonCard from './SkeletonCard';
 import Navbar from './Navbar';
 import { AiOutlineLike } from 'react-icons/ai';
 import {CiLocationOn} from "react-icons/ci";
 
-const { Meta } = Card;
 
 const Gallery = () => {
     const [data, setData] = useState<any>(null);
@@ -15,24 +14,28 @@ const Gallery = () => {
     const [theme, setTheme] = useState<'light' | 'dark'>('light');
     const [selectedCard, setSelectedCard] = useState<any>(null);
 
-    let baseUrl: string;
+    const baseUrlRef = useRef<string | null>(null);
 
     const REACT_APP_API_ACCESS_KEY = process.env.REACT_APP_API_ACCESS_KEY;
 
     const fetchData1 = async () => {
         try {
-            const response = await axios.get(baseUrl);
-            setData(response.data);
-            setLoading(false);
+            if (baseUrlRef.current) {
+                const response = await axios.get(baseUrlRef.current);
+                setData(response.data);
+                setLoading(false);
+            }
         } catch (error) {
             console.error('Error fetching data:', error);
         }
     };
     const fetchData2 = async () => {
         try {
-            const response = await axios.get(baseUrl);
-            setData(response.data.results);
-            setLoading(false);
+            if (baseUrlRef.current) {
+                const response = await axios.get(baseUrlRef?.current);
+                setData(response.data.results);
+                setLoading(false);
+            }
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -40,13 +43,13 @@ const Gallery = () => {
 
     useEffect(() => {
         if (searchTerm !== '') {
-            baseUrl = `https://api.unsplash.com/search/photos/?client_id=${REACT_APP_API_ACCESS_KEY}&query=${searchTerm}&per_page=30`;
+            baseUrlRef.current = `https://api.unsplash.com/search/photos/?client_id=${REACT_APP_API_ACCESS_KEY}&query=${searchTerm}&per_page=30`;
             fetchData2();
         } else {
-            baseUrl = `https://api.unsplash.com/photos/?client_id=${REACT_APP_API_ACCESS_KEY}&per_page=30`;
+            baseUrlRef.current = `https://api.unsplash.com/photos/?client_id=${REACT_APP_API_ACCESS_KEY}&per_page=30`;
             fetchData1();
         }
-    }, [searchTerm]);
+    }, [searchTerm, REACT_APP_API_ACCESS_KEY]);
 
     const handleSearch = (value: string) => {
         setSearchTerm(value);
