@@ -50,8 +50,6 @@ const Gallery = () => {
         setSearchTerm(value);
     };
 
-    console.log('REACT_APP_API_ACCESS_KEY:', process.env.REACT_APP_API_ACCESS_KEY);
-
     console.log(data);
 
     return (
