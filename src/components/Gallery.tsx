@@ -16,7 +16,6 @@ const Gallery = () => {
 
     const baseUrlRef = useRef<string | null>(null);
 
-    const REACT_APP_API_ACCESS_KEY = process.env.REACT_APP_API_ACCESS_KEY;
 
     const fetchData1 = async () => {
         try {
@@ -49,7 +48,7 @@ const Gallery = () => {
             baseUrlRef.current = `https://api.unsplash.com/photos/?client_id=C7YAPYI6VGT485gdDdvSmQjXC-FYuFWKK3yB4DOZTnc&per_page=30`;
             fetchData1();
         }
-    }, [searchTerm, REACT_APP_API_ACCESS_KEY]);
+    }, [searchTerm]);
 
     const handleSearch = (value: string) => {
         setSearchTerm(value);
