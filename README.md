@@ -42,7 +42,7 @@ Fotofolio is a web application that allows users to explore and discover a curat
 4. Open your browser and visit http://localhost:3000
 
 ### Hosted Server
-The project is hosted on https://fotofolio.vercel.app/
+The project is hosted on https://foto-folio-seven.vercel.app/
 
 Visit Fotofolio to explore the photo gallery!
 
